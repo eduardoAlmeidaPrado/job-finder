@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require('./db/connection.js');
 
 const PORT = 3000;
 
@@ -11,3 +12,13 @@ app.listen(PORT, function() {
 app.get('/', (req, res) => {
     res.send("Está funcionando");
 });
+
+// db connection
+db
+    .authenticate()
+    .then(() => {
+       console.log("Conectou ao banco com sucesso"); 
+    })
+    .catch(err => {
+        console.log("Ocorreu um erro ao conectar");
+    });
