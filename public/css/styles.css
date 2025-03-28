@@ -42,7 +42,7 @@
     border-bottom: 4px solid #013068;
     margin-bottom: 30px;
     background-image: url("../img/banner.jpg");
-    background-position: 0 -250px;
+    background-position: 0 100px;
     background-size: cover;
     color: #FFF;
   }
